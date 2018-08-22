@@ -38,13 +38,13 @@ Observe the IP addresses to be static, especially if testing on notebook in VMwa
 1. `oc login`
 2. `oc new-project project_name`
 3. `oc adm policy add-scc-to-user anyuid -z default`
-4. OpenShift web UI
-	Add to Project
-	Image Name -> ibmcom/iib
-	Environment Variables
-		LICENSE	accept
-		NODENAME	mynode
-		SERVERNAME	myserver
+4. OpenShift web UI  
+	Add to Project  
+	Image Name -> ibmcom/iib  
+	Environment Variables  
+		LICENSE	accept  
+		NODENAME	mynode  
+		SERVERNAME	myserver  
 	Deploy
 
 ### Alternative, when you need to build your own modified Docker image
@@ -57,13 +57,13 @@ Observe the IP addresses to be static, especially if testing on notebook in VMwa
 7. `docker tag iibv10image 172.30.220.167:5000/project/name`
 8. `docker push 172.30.220.167:5000/project/name`
 9. `oc get is`
-10. OpenShift web UI
-	Add to Project
-	Image Stream Tag -> projectname
-	Image Stream -> iib
-	Tag -> latest
-	Environment Variables
-		LICENSE	accept
-		NODENAME	mynode
-		SERVERNAME	myserver
+10. OpenShift web UI  
+	Add to Project  
+	Image Stream Tag -> projectname  
+	Image Stream -> iib  
+	Tag -> latest  
+	Environment Variables  
+		LICENSE	accept  
+		NODENAME	mynode  
+		SERVERNAME	myserver  
 	Deploy

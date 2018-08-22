@@ -23,7 +23,7 @@ Observe the IP addresses to be static, especially if testing on notebook in VMwa
 ## IIB/ACE in Docker
 Follow the IIB / ACE documentation
 1. Clone the github repository  
-	`git clone` 
+	`git clone https://github.com/ot4i/iib-docker` 
 2. Change the license type to advanced in iib_manage.sh  
 	`mqsimode IIB_NODE -o advanced`
 3. Build the image  
@@ -35,6 +35,8 @@ Follow the IIB / ACE documentation
 3. `oc whoami -t`
 4. `docker login -u juso00 -p NEIh_gRR3RFARuam9OZnIqWWeQSrCWrU4SpQABdoKJ4 172.30.220.167:5000`
 5. `oc project`
-6. `docker tag iibv10image 172.30.220.167:5000/project/name`
-7. `docker push 172.30.220.167:5000/project/name`
+6. turn off security
+	`oc adm policy add-scc-to-user anyuid -z default`
+7. `docker tag iibv10image 172.30.220.167:5000/project/name`
+8. `docker push 172.30.220.167:5000/project/name`
 8. `oc get is`

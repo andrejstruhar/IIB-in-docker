@@ -1,4 +1,4 @@
-# IIB-in-docker
+# IIB-in-container
 Putting IIB / ACE into container
 
 Documenting the progress of testing IBM Integration Bus (IIB) and AppConnect Enterprise (ACE) in different container technologies.
@@ -7,7 +7,7 @@ Extending to OpenShift.
 
 ## Install OpenShift Origin
 1. Create VMware image with RHEL 7.5 (alternatively Centos 7)
-2. Cech the requirement https://docs.okd.io/latest/install/prerequisites.html (just basic, not necessary to do all)
+2. Check the requirement https://docs.okd.io/latest/install/prerequisites.html (just basic, not necessary to do all)
 3. Setup and install packages as documented in https://docs.okd.io/latest/install/host_preparation.html (just basic, not necessary to do all)
 4. Clone the image based on the planned architecture (1 master + x nodes)
 5. Clone https://github.com/gshipley/installcentos (git clone https://github.com/gshipley/installcentos)

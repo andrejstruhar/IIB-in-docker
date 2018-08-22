@@ -13,7 +13,7 @@ Extending to OpenShift.
 5. Clone https://github.com/gshipley/installcentos (`git clone https://github.com/gshipley/installcentos`)
 6. Modify `install-openshift.sh` - mainly IP addresses for master and nodes
 7. DNS is mandatory requirement but can be bypassed by using <IP_master_node>.nip.io
-8. Set environment variables
+8. Set environment variables  
 	`export DOMAIN=<public ip address>.nip.io`  
 	`export USERNAME=<current user name>`  
 	`export PASSWORD=password `  

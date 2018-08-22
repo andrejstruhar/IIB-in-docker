@@ -10,7 +10,7 @@ Extending to OpenShift.
 1. `docker pull ibmcom/iib`  (or ibmcom/ace)
 2. `docker run --name myNode -e LICENSE=accept -e NODENAME=MYNODE -P docker.io/ibmcom/iib`  
 
-### To personalize the image
+### To personalized the image
 Follow the IIB / ACE documentation
 1. Clone the github repository  
 	`git clone https://github.com/ot4i/iib-docker`	(or https://github.com/ot4i/ace-docker)
@@ -18,9 +18,9 @@ Follow the IIB / ACE documentation
 	`mqsimode IIB_NODE -o advanced`
 3. Build the image  
 	`docker build -t iibv10image .`
-4. Run the container
+4. Run the container  
 	`docker run --name myNode -e LICENSE=accept -e NODENAME=MYNODE -P iibv10image`
-5. Test the container by logging into it
+5. Test the container by logging into it  
 	`docker exec -it <container name> /bin/bash`
 
 ## Install OpenShift Origin

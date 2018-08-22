@@ -34,6 +34,7 @@ Follow the IIB / ACE documentation
 Observe the IP addresses to be static, especially if testing on notebook in VMware - can assign different addresses.
 
 ## IIB/ACE in OpenShift
+### Default image from IBM repository
 1. `oc login`
 2. `oc new-project project_name`
 3. `oc adm policy add-scc-to-user anyuid -z default`
@@ -46,8 +47,7 @@ Observe the IP addresses to be static, especially if testing on notebook in VMwa
 		SERVERNAME	myserver
 	Deploy
 
-## IIB/ACE in OpenShift
-Alternative, when you need to build your own modified Docker image
+### Alternative, when you need to build your own modified Docker image
 1. `oc login`
 2. `oc get svc -n default | grep registry`
 3. `oc whoami -t`

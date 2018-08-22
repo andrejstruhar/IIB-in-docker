@@ -10,14 +10,13 @@ Extending to OpenShift.
 2. Check the requirement https://docs.okd.io/latest/install/prerequisites.html (just basic, not necessary to do all)
 3. Setup and install packages as documented in https://docs.okd.io/latest/install/host_preparation.html (just basic, not necessary to do all)
 4. Clone the image based on the planned architecture (1 master + x nodes)
-5. Clone https://github.com/gshipley/installcentos (git clone https://github.com/gshipley/installcentos)
+5. Clone https://github.com/gshipley/installcentos (`git clone https://github.com/gshipley/installcentos`)
 6. Modify `install-openshift.sh` - mainly IP addresses for master and nodes
 7. DNS is mandatory requirement but can be bypassed by using <IP_master_node>.nip.io
 8. Set environment variables
-	```
-	$ export DOMAIN=<public ip address>.nip.io
-	$ export USERNAME=<current user name>
-	$ export PASSWORD=password ```
+	`export DOMAIN=<public ip address>.nip.io`
+	`export USERNAME=<current user name>`
+	`export PASSWORD=password `
 9. Run the install script
 Observe the IP addresses to be static, especially if testing on notebook in VMware - can assign different addresses.
 

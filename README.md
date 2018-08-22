@@ -6,9 +6,14 @@ Starting with Docker.
 Extending to OpenShift.
 
 ## IIB/ACE in Docker
+### The easy way  
+1. `docker pull ibmcom/iib`  (or ibmcom/ace)
+2. `docker run --name myNode -e LICENSE=accept -e NODENAME=MYNODE -P docker.io/ibmcom/iib`  
+
+### To personalize the image
 Follow the IIB / ACE documentation
 1. Clone the github repository  
-	`git clone https://github.com/ot4i/iib-docker` 
+	`git clone https://github.com/ot4i/iib-docker`	(or https://github.com/ot4i/ace-docker)
 2. Change the license type to advanced in iib_manage.sh  
 	`mqsimode IIB_NODE -o advanced`
 3. Build the image  
@@ -40,7 +45,7 @@ Observe the IP addresses to be static, especially if testing on notebook in VMwa
 3. `oc adm policy add-scc-to-user anyuid -z default`
 4. OpenShift web UI  
 	Add to Project  
-	Image Name -> ibmcom/iib  
+	Image Name -> ibmcom/iib	(or ibmcom/ace)
 	Environment Variables  
 		LICENSE	accept  
 		NODENAME	mynode  
@@ -53,7 +58,7 @@ Observe the IP addresses to be static, especially if testing on notebook in VMwa
 3. `oc whoami -t`
 4. `docker login -u <username> -p NEIh_gRR3RFARuam9OZnIqWWeQSrCWrU4SpQABdoKJ4 172.30.220.167:5000`
 5. `oc new-project project_name`
-6. `oc adm policy add-scc-to-user anyuid -z default` - turns off security
+6. `oc adm policy add-scc-to-user anyuid -z default` - otherwise it will fail = OpenShift security runs container under the generated UID = cann't use root / other user which is specified in starting script `iib_manage.sh` (e.g. `sudo /usr/sbin/rsyslogd`)
 7. `docker tag iibv10image 172.30.220.167:5000/project/name`
 8. `docker push 172.30.220.167:5000/project/name`
 9. `oc get is`

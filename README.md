@@ -30,11 +30,11 @@ Follow the IIB / ACE documentation
     `docker build -t iibv10image .`
 
 ## IIB/ACE in OpenShift
-1. oc login
-2. oc get svc -n default | grep registry
-3. oc whoami -t
-4. docker login -u juso00 -p NEIh_gRR3RFARuam9OZnIqWWeQSrCWrU4SpQABdoKJ4 172.30.220.167:5000
-5. oc project
-6. docker tag iibv10image 172.30.220.167:5000/project/name
-7. docker push 172.30.220.167:5000/project/name
-8. oc get is
+1. `oc login`
+2. `oc get svc -n default | grep registry`
+3. `oc whoami -t`
+4. `docker login -u juso00 -p NEIh_gRR3RFARuam9OZnIqWWeQSrCWrU4SpQABdoKJ4 172.30.220.167:5000`
+5. `oc project`
+6. `docker tag iibv10image 172.30.220.167:5000/project/name`
+7. `docker push 172.30.220.167:5000/project/name`
+8. `oc get is`

@@ -14,19 +14,19 @@ Extending to OpenShift.
 6. Modify `install-openshift.sh` - mainly IP addresses for master and nodes
 7. DNS is mandatory requirement but can be bypassed by using <IP_master_node>.nip.io
 8. Set environment variables
-	`export DOMAIN=<public ip address>.nip.io`
-	`export USERNAME=<current user name>`
-	`export PASSWORD=password `
+	`export DOMAIN=<public ip address>.nip.io`  
+	`export USERNAME=<current user name>`  
+	`export PASSWORD=password `  
 9. Run the install script
 Observe the IP addresses to be static, especially if testing on notebook in VMware - can assign different addresses.
 
 ## IIB/ACE in Docker
 Follow the IIB / ACE documentation
-1. Clone the github repository
+1. Clone the github repository  
 	`git clone` 
-2. Change the license type to advanced in iib_manage.sh
+2. Change the license type to advanced in iib_manage.sh  
 	`mqsimode IIB_NODE -o advanced`
-3. Build the image
+3. Build the image  
 	`docker build -t iibv10image .`
 
 ## IIB/ACE in OpenShift

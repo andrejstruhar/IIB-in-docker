@@ -51,7 +51,7 @@ Alternative, when you need to build your own modified Docker image
 1. `oc login`
 2. `oc get svc -n default | grep registry`
 3. `oc whoami -t`
-4. `docker login -u juso00 -p NEIh_gRR3RFARuam9OZnIqWWeQSrCWrU4SpQABdoKJ4 172.30.220.167:5000`
+4. `docker login -u <username> -p NEIh_gRR3RFARuam9OZnIqWWeQSrCWrU4SpQABdoKJ4 172.30.220.167:5000`
 5. `oc new-project project_name`
 6. `oc adm policy add-scc-to-user anyuid -z default` - turns off security
 7. `docker tag iibv10image 172.30.220.167:5000/project/name`

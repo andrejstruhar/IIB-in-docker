@@ -14,7 +14,8 @@ Extending to OpenShift.
 6. Modify install-openshift.sh - mainly IP addresses for master and nodes
 7. DNS is mandatory requirement but can be bypassed by using <IP_master_node>.nip.io
 8. Set environment variables
-	```$ export DOMAIN=<public ip address>.nip.io
+	```
+	$ export DOMAIN=<public ip address>.nip.io
 	$ export USERNAME=<current user name>
 	$ export PASSWORD=password ```
 9. Run the install script

@@ -58,7 +58,7 @@ Observe the IP addresses to be static, especially if testing on notebook in VMwa
 3. `oc whoami -t`
 4. `docker login -u <username> -p NEIh_gRR3RFARuam9OZnIqWWeQSrCWrU4SpQABdoKJ4 172.30.220.167:5000`
 5. `oc new-project project_name`
-6. `oc adm policy add-scc-to-user anyuid -z default` - otherwise it will fail = OpenShift security runs container under the generated UID = cann't use root / other user which is specified in starting script `iib_manage.sh` (e.g. `sudo /usr/sbin/rsyslogd`)
+6. `oc adm policy add-scc-to-user anyuid -z default` - otherwise it will fail = OpenShift security runs container under the generated UID = can't use root / other user which is specified in starting script `iib_manage.sh` (e.g. `sudo /usr/sbin/rsyslogd`)
 7. `docker tag iibv10image 172.30.220.167:5000/project/name`
 8. `docker push 172.30.220.167:5000/project/name`
 9. `oc get is`

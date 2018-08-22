@@ -22,11 +22,12 @@ Observe the IP addresses to be static, especially if testing on notebook in VMwa
 
 ## IIB/ACE in Docker
 Follow the IIB / ACE documentation
-1. `git clone` 
+1. Clone the github repository
+	`git clone` 
 2. Change the license type to advanced in iib_manage.sh
-    `mqsimode IIB_NODE -o advanced`
+	`mqsimode IIB_NODE -o advanced`
 3. Build the image
-    `docker build -t iibv10image .`
+	`docker build -t iibv10image .`
 
 ## IIB/ACE in OpenShift
 1. `oc login`

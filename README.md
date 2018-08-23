@@ -8,9 +8,11 @@ Extending to OpenShift.
 ## IIB/ACE in Docker
 ### The easy way  
 1. `docker pull ibmcom/iib`  (or ibmcom/ace)
-2. `docker run --name myNode -e LICENSE=accept -e NODENAME=MYNODE -P docker.io/ibmcom/iib`  
+2. `docker run --name myNode -e LICENSE=accept -e NODENAME=MYNODE -e SEVERNAME=myserver -P docker.io/ibmcom/iib:latest`  
+3. `docker port container_id`  (find the port mapped)  
+4. http://iibserver_address:port (connect to IIB/ACE web admin interface to test whether it works)  
 
-### To personalized the image
+### To personalize the image
 Follow the IIB / ACE documentation
 1. Clone the github repository  
 	`git clone https://github.com/ot4i/iib-docker`	(or https://github.com/ot4i/ace-docker)
@@ -19,7 +21,7 @@ Follow the IIB / ACE documentation
 3. Build the image  
 	`docker build -t iibv10image .`
 4. Run the container  
-	`docker run --name myNode -e LICENSE=accept -e NODENAME=MYNODE -P iibv10image`
+	`docker run --name myNode -e LICENSE=accept -e NODENAME=MYNODE -e SERVERNAME:myserver-P iibv10image`
 5. Test the container by logging into it  
 	`docker exec -it <container name> /bin/bash`
 

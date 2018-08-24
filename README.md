@@ -12,6 +12,12 @@ Extending to OpenShift.
 3. `docker port container_id`  (find the port mapped)  
 4. http://iibserver_address:port (connect to IIB/ACE web admin interface to test whether it works)  
 
+### Image from IBM SW download site
+1. Download ACE_V11.0_Container.tar.gz  
+2. untar  
+3. `docker load`  
+4. `docker run`  
+
 ### To personalize the image
 Follow the IIB / ACE documentation
 1. Clone the github repository  

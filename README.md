@@ -29,7 +29,7 @@ Follow the IIB / ACE documentation
 4. Run the container  
 	`docker run --name myNode -e LICENSE=accept -e NODENAME=MYNODE -e SERVERNAME:myserver-P iibv10image`
 5. Test the container by logging into it  
-	`docker exec -it <container name> /bin/bash` 
+	`docker exec -it <container name> /bin/bash`  
 
 ## Install OpenShift Origin
 1. Create VMware image with RHEL 7.5 (alternatively Centos 7)

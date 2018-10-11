@@ -95,5 +95,13 @@ Observe the IP addresses to be static, especially if testing on notebook in VMwa
 	  && rm /opt/ibm/11.0.0-ACE-LINUXX64-FP0001.tar.gz
 	- and all the other 11.0.0.0 references -> 11.0.0.1
 5. docker build -t ace:11.0.0.1 .
-
 Issues - big image, couldn't delete install file from inside
+
+#How to modify properties of integration server
+1. download local copy of server.conf.yaml from the running container
+	`docker cp myAce:/home/aceuser/ace-server/server.conf.yaml .`  
+2. edit server.conf.yaml
+3. run the container
+	`docker run --rm --name myAce -e LICENSE=accept -p7600:7600 -p7800:7800 -v $(pwd)/server.conf.yaml:/home/aceuser/ace-server/server.conf.yam ace:11.0.0.1`
+Issues - not working yet
+

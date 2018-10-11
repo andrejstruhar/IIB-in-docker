@@ -80,3 +80,20 @@ Observe the IP addresses to be static, especially if testing on notebook in VMwa
 		NODENAME	mynode  
 		SERVERNAME	myserver  
 	Deploy
+
+# ACE 11.0.0.1 in Docker
+1. `git clone https://github.com/ot4i/ace-docker`	(This is version 11.0.0.0)
+2. rename folders according to new version 11.0.0.1
+3. Download ACE 11.0.0.0 FP1 from FixCentral into right folder (e.g. ace-docker_11.0.0.1/11.0.0.1/ace/ubuntu-1604/base/)
+4. Edit Dockerfile
+	COPY 11.0.0-ACE-LINUXX64-FP0001.tar.gz /opt/ibm
+	RUN apt update && apt -y install --no-install-recommends curl rsyslog sudo \
+	  && tar xz --exclude ace-11.0.0.1/tools --directory /opt/ibm/ -f /opt/ibm/11.0.0-ACE-LINUXX64-FP0001.tar.gz \
+	  && /opt/ibm/ace-11.0.0.1/ace make registry global accept license silently \
+	  && apt remove -y curl \
+	  && rm -rf /var/lib/apt/lists/* \
+	  && rm /opt/ibm/11.0.0-ACE-LINUXX64-FP0001.tar.gz
+	- and all the other 11.0.0.0 references -> 11.0.0.1
+5. docker build -t ace:11.0.0.1 .
+
+Issues - big image, couldn't delete install file from inside

@@ -1,4 +1,4 @@
-# IIB-in-container
+# IIB/ACE -in-OpenShift
 Putting IIB / ACE into container
 
 Documenting the progress of testing IBM Integration Bus (IIB) and AppConnect Enterprise (ACE) in different container technologies.
